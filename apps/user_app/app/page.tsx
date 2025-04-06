@@ -1,6 +1,12 @@
+"use client"
+
+import { SessionProvider } from "next-auth/react";
+import { Appbar } from "../components/Appbar";
 
 export default function Page() {
   return (
-    <div className="text-red-500 font-semibold">Hii</div>
+    <SessionProvider>
+      <Appbar></Appbar>
+    </SessionProvider>
   )
 }
