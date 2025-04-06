@@ -5,7 +5,7 @@
     "bcrypt": "^5.1.1"
   },
   "devDependencies": {
-    "@prisma/client": "^6.5.0",
+    "@prisma/client": "^5.22.0",
     "@types/bcrypt": "^5.0.2",
     "install": "^0.13.0",
     "npm": "^11.2.0",

@@ -9,6 +9,12 @@ async function main() {
       name: "alice",
       number: "111111111",
       password: await bcrypt.hash("alice", 10),
+      balance:{
+        create:{
+          amount:20000,
+          locked:0
+        }
+      }
     },
     update: {},
     where: {
@@ -16,15 +22,22 @@ async function main() {
     },
   });
   console.log(alice);
+
   const bob = await prisma.user.upsert({
     create: {
       name: "bob",
-      number: "111111111",
+      number: "000000000",
       password: await bcrypt.hash("bob", 10),
+      balance:{
+        create:{
+          amount:10000,
+          locked:0
+        }
+      }
     },
     update: {},
     where: {
-      number: "111111111",
+      number: "000000000",
     },
   });
   console.log(bob);
