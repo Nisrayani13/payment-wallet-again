@@ -1,16 +1,22 @@
 {
   "name": "@repo/store",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "description": "",
   "dependencies": {
     "recoil": "^0.7.7"
+  },
+  "exports": {
+    "./useBalance": "./dist/hooks/useBalance.js",
+    "./balanceAtom": "./dist/atoms/balance.js"
   }
 }

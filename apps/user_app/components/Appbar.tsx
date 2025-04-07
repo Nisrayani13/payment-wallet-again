@@ -1,8 +1,12 @@
 "use client";
+
 import { signIn, signOut, useSession } from "next-auth/react";
+import {useBalance} from "@repo/store/useBalance"
+
 
 export const Appbar = () => {
   const { data: session } = useSession();
+  const balance=useBalance();
   return (
     <div>
       <div className="flex items-center justify-between py-3 px-5 border-b">
@@ -15,6 +19,8 @@ export const Appbar = () => {
           )}
         </div>
       </div>
+
+      <div>My balance is {balance}</div>
     </div>
   );
 };
