@@ -54,3 +54,8 @@ app.post("/hdfcWebhook", async (req: any, res: any) => {
     });
   }
 });
+
+
+app.listen(3003,()=>{
+  console.log("Bank webhook is listening on port:3003")
+})
